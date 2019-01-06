@@ -3,4 +3,4 @@ echo "Cloned from github"
 NUMBER=$(($NUMBERONE + $NUMBERTWO))
 echo "$NUMBER"
 
-echo "Done"
+echo "All done"
