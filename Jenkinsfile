@@ -38,8 +38,10 @@ agent none
             agent {
                 docker  'centos'
             }
+            steps{
             unstash "src"
             sh 'python src/script.py'
+            }
         }
     }
 
