@@ -1,3 +1,5 @@
+library "lib"
+
 pipeline {
 agent none
 
