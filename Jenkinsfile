@@ -13,6 +13,10 @@ agent none
         }
 
         stage('checkout'){
+            agent {
+                label 'master'
+            }
+
             steps {
             checkout scm
             stash name: "src"
@@ -20,6 +24,10 @@ agent none
         }
 
         stage('build'){
+             agent {
+                label 'master'
+            }
+
             steps {
             unstash "src"
             sh 'pyhon src/script.py'
