@@ -31,7 +31,7 @@ agent none
             steps {
             unstash "src"
             sh 'python src/script.py'
-            sh 'ip a'
+            sh 'hostname'
             }
         }
 
@@ -42,7 +42,7 @@ agent none
             steps{
             unstash "src"
             sh 'python src/script.py'
-            sh 'ip a'
+            sh 'hostname'
             }
         }
     }
