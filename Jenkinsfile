@@ -30,7 +30,7 @@ agent none
 
             steps {
             unstash "src"
-            sh 'pyhon src/script.py'
+            sh 'python src/script.py'
             }
         }
     }
