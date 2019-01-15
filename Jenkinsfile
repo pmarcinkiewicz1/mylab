@@ -6,6 +6,7 @@ agent none
         stage('first'){
             steps {
             echo "First stage"
+            trySomething("test")
             }
         }
 
