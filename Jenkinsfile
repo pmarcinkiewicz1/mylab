@@ -33,6 +33,14 @@ agent none
             sh 'python src/script.py'
             }
         }
+
+        stage('build on docker'){
+            agent {
+                docker  'centos'
+            }
+            unstash "src"
+            sh 'python src/script.py'
+        }
     }
 
 }
