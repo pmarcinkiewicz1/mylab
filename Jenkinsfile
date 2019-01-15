@@ -12,9 +12,17 @@ agent none
             }
         }
 
-        stage('second'){
+        stage('checkout'){
             steps {
-            echo "Second stage"
+            checkout scm
+            stash name: "src"
+            }
+        }
+
+        stage('build'){
+            steps {
+            unstash "src"
+            sh 'pyhon src/script.py'
             }
         }
     }
