@@ -46,6 +46,9 @@ agent none
             }
         }
         stage('test'){
+             agent {
+                label 'master'
+            }
             steps {
               def new_path = checkPath(env.PATH)
               echo new_path
