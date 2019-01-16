@@ -45,6 +45,12 @@ agent none
             sh 'hostname'
             }
         }
+        stage('test'){
+            steps {
+              def new_path = checkPath(env.PATH)
+              echo new_path
+            }
+        }
     }
 
 }
