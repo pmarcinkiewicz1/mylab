@@ -49,7 +49,7 @@ agent none
              agent {
                 label 'master'
             }
-            steps {
+            script {
               def new_path = checkPath(env.PATH)
               echo new_path
             }
