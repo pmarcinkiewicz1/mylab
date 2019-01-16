@@ -51,7 +51,7 @@ agent none
             }
             steps {
             script {
-              def new_path = checkPath(env.PATH)
+              def new_path = checkPath(env.TEST_PATH)
               echo new_path
             }
         }
