@@ -56,6 +56,16 @@ agent none
             }
         }
         }
+
+        stage('scp'){
+             agent {
+                label 'master'
+            }
+
+            steps {
+                runShell(env.ARG1,env.ARG2)
+            }
+        }
     }
 
 }
