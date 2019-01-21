@@ -54,7 +54,7 @@ agent none
               def new_path = checkPath(env.TEST_PATH)
               echo new_path
 
-            if (env.VARIABLE){
+            if (isTriggered()){
                 echo "Variable is set"
             }
             }
