@@ -53,6 +53,10 @@ agent none
             script {
               def new_path = checkPath(env.TEST_PATH)
               echo new_path
+
+            if (env.VARIABLE){
+                echo "Variable is set"
+            }
             }
         }
         }
